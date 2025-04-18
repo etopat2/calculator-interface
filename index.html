@@ -8,39 +8,37 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="section">
+<div class="calculator">
   <form>
-  <table>
-    <tr>
-      <td colspan="4">
-        <input type="text" name="display" class="display">
+    <div>
+        <input type="text" name="display" class="display" placeholder="0">
         <hr />
-      </td>
-    </tr>
-    <tr>
-      <td><input type="button" class="btn" value="7" onclick="display.value += '7'"></td>
-      <td><input type="button" class="btn" value="8" onclick="display.value += '8'"></td>
-      <td><input type="button" class="btn" value="9" onclick="display.value += '9'"></td>
-      <td><input type="button" class="btn btn-op" value="/" onclick="display.value += '/'"></td>
-    </tr>
-    <tr>
-      <td><input type="button" class="btn" value="4" onclick="display.value += '4'"></td>
-      <td><input type="button" class="btn" value="5" onclick="display.value += '5'"></td>
-      <td><input type="button" class="btn" value="6" onclick="display.value += '6'"></td>
-      <td><input type="button" class="btn btn-op" value="*" onclick="display.value += '*'"></td>
-    </tr>
-    <tr>
-      <td><input type="button" class="btn" value="1" onclick="display.value += '1'"></td>
-      <td><input type="button" class="btn" value="2" onclick="display.value += '2'"></td>
-      <td><input type="button" class="btn" value="3" onclick="display.value += '3'"></td>
-      <td><input type="button" class="btn btn-op" value="-" onclick="display.value += '-'"></td>
-    </tr>
-    <tr>
-      <td colspan="2"><input type="button" class="btn btn-zero" value="0" onclick="display.value += '0'"></td>
-      <td><input type="button" value="=" class="btn btn-equal"></td>
-      <td><input type="button" class="btn btn-op" value="+" onclick="display.value += '+'"></td>
-    </tr>
-  </table>
+    </div>
+    <div class="btn-wrapper">
+     <div class="btn-row">
+      <input type="button" class="btn" value="7" onclick="display.value += '7'">
+      <input type="button" class="btn" value="8" onclick="display.value += '8'">
+      <input type="button" class="btn" value="9" onclick="display.value += '9'">
+      <input type="button" class="btn btn-op" value="/" onclick="display.value += '/'">
+    </div>
+    <div class="btn-row">
+      <input type="button" class="btn" value="4" onclick="display.value += '4'">
+      <input type="button" class="btn" value="5" onclick="display.value += '5'">
+      <input type="button" class="btn" value="6" onclick="display.value += '6'">
+      <input type="button" class="btn btn-op" value="*" onclick="display.value += '*'">
+    </div>
+    <div class="btn-row">
+      <input type="button" class="btn" value="1" onclick="display.value += '1'">
+      <input type="button" class="btn" value="2" onclick="display.value += '2'">
+      <input type="button" class="btn" value="3" onclick="display.value += '3'">
+      <input type="button" class="btn btn-op" value="-" onclick="display.value += '-'">
+    </div>
+    <div class="btn-row">
+      <input type="button" class="btn btn-zero" value="0" onclick="display.value += '0'">
+      <input type="button" value="=" class="btn btn-equal" onclick="display.value = eval(display.value)">
+      <input type="button" class="btn btn-op" value="+" onclick="display.value += '+'">
+    </div>
+    </div>
   </form>
 </div>
 <!-- partial -->
